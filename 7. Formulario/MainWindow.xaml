@@ -19,16 +19,15 @@
             FontSize="40"
             FontWeight="Bold"
             TextAlignment="Center" />
-        <DockPanel
+        <DockPanel LastChildFill="False"
             Margin=" 5"
             DockPanel.Dock="Bottom">
             <TextBlock
                 Text="Iván López"
                 FontSize="20"
                 FontStyle="Italic" />
-            <StackPanel
-                Orientation="Horizontal"
-                HorizontalAlignment="Right">
+            <StackPanel DockPanel.Dock="Right"
+                        Orientation="Horizontal">
                 <Button
                     Content="Aceptar"
                     Width="100" 
@@ -60,11 +59,11 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition
-                            Width="3*" />
+                            Width="75" />
                         <ColumnDefinition
-                            Width="18*" />
+                            Width="1*" />
                         <ColumnDefinition
-                            Width="1.3*" />
+                            Width="30" />
                     </Grid.ColumnDefinitions>
 
                     <TextBlock
