@@ -34,7 +34,7 @@
                Margin="10, 10, 15, 10"
                Source="assets/foto.jpg" />
         <StackPanel>
-            <Border>
+            <Border Style="{StaticResource BordeFormulario}">
                 <Grid Background="LightSkyBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition />
@@ -85,7 +85,7 @@
                            ToolTip="Incluir el código postal" />
                 </Grid>
             </Border>
-            <Border>
+            <Border Style="{StaticResource BordeFormulario}">
                 <StackPanel Orientation="Horizontal"
                             Background="Beige">
                     <GroupBox Header="Aficiones">

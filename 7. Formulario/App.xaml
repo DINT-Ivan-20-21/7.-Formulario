@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:_7.Formulario"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <Style TargetType="Border">
+        <Style TargetType="Border"
+               x:Key="BordeFormulario">
             <Setter Property="BorderBrush"
                     Value="Black" />
             <Setter Property="BorderThickness"
