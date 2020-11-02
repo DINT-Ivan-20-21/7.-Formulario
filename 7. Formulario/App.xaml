@@ -4,6 +4,58 @@
              xmlns:local="clr-namespace:_7.Formulario"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush"
+                    Value="Black" />
+            <Setter Property="BorderThickness"
+                    Value="3" />
+            <Setter Property="CornerRadius"
+                    Value="4" />
+            <Setter Property="Margin"
+                    Value="5" />
+            <Setter Property="Effect">
+                <Setter.Value>
+                    <DropShadowEffect />
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style TargetType="Image"
+               x:Key="Icono">
+            <Setter Property="Margin"
+                    Value="0,0,5,0" />
+            <Setter Property="Source"
+                    Value="assets/info.png" />
+        </Style>
+        <Style TargetType="TextBlock"
+               x:Key="Label">
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="TextBox"
+               x:Key="Campo">
+            <Setter Property="Margin"
+                    Value="5" />
+        </Style>
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin"
+                    Value="10,10,10,15" />
+            <Setter Property="BorderBrush"
+                    Value="LightBlue" />
+        </Style>
+        <Style TargetType="StackPanel"
+               x:Key="GroupBoxStack">
+            <Setter Property="Margin"
+                    Value="10" />
+            <Setter Property="Width"
+                    Value="170" />
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="GroupName"
+                    Value="EstadoCivil" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="Width"
+                    Value="100" />
+        </Style>
     </Application.Resources>
 </Application>

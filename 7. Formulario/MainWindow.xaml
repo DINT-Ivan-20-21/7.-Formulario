@@ -1,169 +1,108 @@
-﻿<Window
-    x:Class="_7.Formulario.MainWindow"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:_7.Formulario"
-    mc:Ignorable="d"
-    Title="Formulario"
-    Height="550"
-    Width="850"
-    MinHeight="550"
-    MinWidth="850"
-    Icon="assets/form.ico">
+﻿<Window x:Class="_7.Formulario.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_7.Formulario"
+        mc:Ignorable="d"
+        Title="Formulario"
+        Height="550"
+        Width="850"
+        MinHeight="550"
+        MinWidth="850"
+        Icon="assets/form.ico">
     <DockPanel>
-        <TextBlock
-            DockPanel.Dock="Top"
-            Text="Formulario"
-            FontSize="40"
-            FontWeight="Bold"
-            TextAlignment="Center" />
+        <TextBlock DockPanel.Dock="Top"
+                   Text="Formulario"
+                   FontSize="40"
+                   FontWeight="Bold"
+                   TextAlignment="Center" />
         <DockPanel LastChildFill="False"
-            Margin=" 5"
-            DockPanel.Dock="Bottom">
-            <TextBlock
-                Text="Iván López"
-                FontSize="20"
-                FontStyle="Italic" />
+                   Margin=" 5"
+                   DockPanel.Dock="Bottom">
+            <TextBlock Text="Iván López"
+                       FontSize="20"
+                       FontStyle="Italic" />
             <StackPanel DockPanel.Dock="Right"
                         Orientation="Horizontal">
-                <Button
-                    Content="Aceptar"
-                    Width="100" 
-                    Margin="0,0,5,0"/>
-                <Button
-                    Content="Cancelar"
-                    Width="100" />
+                <Button Content="Aceptar"
+                        Margin="0,0,5,0" />
+                <Button Content="Cancelar" />
             </StackPanel>
         </DockPanel>
-        <Image
-            DockPanel.Dock="Right"
-            Margin="10, 10, 15, 10"
-            Source="assets/foto.jpg" />
+        <Image DockPanel.Dock="Right"
+               Margin="10, 10, 15, 10"
+               Source="assets/foto.jpg" />
         <StackPanel>
-            <Border
-                BorderBrush="Black"
-                BorderThickness="3"
-                CornerRadius="4"
-                Margin="5">
-                <Border.Effect>
-                    <DropShadowEffect />
-                </Border.Effect>
-                <Grid
-                    Background="LightSkyBlue">
+            <Border>
+                <Grid Background="LightSkyBlue">
                     <Grid.RowDefinitions>
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition />
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition
-                            Width="75" />
-                        <ColumnDefinition
-                            Width="1*" />
-                        <ColumnDefinition
-                            Width="30" />
+                        <ColumnDefinition Width="70" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="30" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock
-                        Grid.Row="0"
-                        Grid.Column="0"
-                        Margin="10,10,5,5"
-                        Text="Nombre" />
+                    <TextBlock Style="{StaticResource Label}"
+                               Grid.Row="0"
+                               Grid.Column="0"
+                               Text="Nombre" />
 
-                    <TextBox
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        Margin="5,10,5,5" />
+                    <TextBox Style="{StaticResource Campo}"
+                             Grid.Row="0"
+                             Grid.Column="1" />
 
-                    <Image
-                        Grid.Row="0"
-                        Grid.Column="2"
-                        Margin="0,5,10,0"
-                        Source="assets/info.png"
-                        ToolTip="Máximo 100 caracteres" />
-                    <TextBlock
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        Margin="10,5,5,5"
-                        Text="Edad" />
-                    <TextBox
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        Margin="5,5,5,5" />
-                    <Image
-                        Grid.Row="1"
-                        Grid.Column="2"
-                        Margin="0,5,10,0"
-                        Source="assets/info.png"
-                        ToolTip="Número entre 0 y 100" />
-                    <TextBlock
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Margin="10,5,5,10"
-                        Text="Dirección" />
-                    <TextBox
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Margin="5,5,5,10" />
+                    <Image Style="{StaticResource Icono}"
+                           Grid.Row="0"
+                           Grid.Column="2"
+                           ToolTip="Máximo 100 caracteres" />
+                    <TextBlock Style="{StaticResource Label}"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Text="Edad" />
+                    <TextBox Style="{StaticResource Campo}"
+                             Grid.Row="1"
+                             Grid.Column="1" />
+                    <Image Style="{StaticResource Icono}"
+                           Grid.Row="1"
+                           Grid.Column="2"
+                           ToolTip="Número entre 0 y 100" />
+                    <TextBlock Style="{StaticResource Label}"
+                               Grid.Row="2"
+                               Grid.Column="0"
+                               Text="Dirección" />
+                    <TextBox Style="{StaticResource Campo}"
+                             Grid.Row="2"
+                             Grid.Column="1" />
 
-                    <Image
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        Margin="0,5,10,0"
-                        Source="assets/info.png"
-                        ToolTip="Incluir el código postal" />
+                    <Image Style="{StaticResource Icono}"
+                           Grid.Row="2"
+                           Grid.Column="2"
+                           ToolTip="Incluir el código postal" />
                 </Grid>
             </Border>
-            <Border
-                BorderBrush="Black"
-                BorderThickness="3"
-                CornerRadius="4"
-                Margin="5">
-                <Border.Effect>
-                    <DropShadowEffect />
-                </Border.Effect>
-                <StackPanel
-                    Orientation="Horizontal"
-                    Background="Beige">
-                    <GroupBox
-                        Header="Aficiones"
-                        BorderBrush="LightBlue"
-                        Margin="10,10,10,15">
-                        <StackPanel
-                            Width="170"
-                            Margin="10,10,10,10">
-                            <CheckBox
-                                Content="Hacer deporte"></CheckBox>
-                            <CheckBox
-                                Content="Viajar"></CheckBox>
-                            <CheckBox
-                                Content="Ver series"></CheckBox>
-                            <CheckBox
-                                Content="Leer comics"></CheckBox>
+            <Border>
+                <StackPanel Orientation="Horizontal"
+                            Background="Beige">
+                    <GroupBox Header="Aficiones">
+                        <StackPanel Style="{StaticResource GroupBoxStack}">
+                            <CheckBox Content="Hacer deporte"></CheckBox>
+                            <CheckBox Content="Viajar"></CheckBox>
+                            <CheckBox Content="Ver series"></CheckBox>
+                            <CheckBox Content="Leer comics"></CheckBox>
                         </StackPanel>
                     </GroupBox>
-                    <GroupBox
-                        Header="Estado civil"
-                        BorderBrush="LightBlue"
-                        Margin="10,10,10,15">
-                        <StackPanel
-                            Width="170"
-                            Margin="10,10,10,10">
-                            <RadioButton
-                                Content="Soltero"
-                                GroupName="estadoCivil"
-                                IsChecked="True"></RadioButton>
-                            <RadioButton
-                                Content="Casado"
-                                GroupName="estadoCivil"></RadioButton>
-                            <RadioButton
-                                Content="Divorciado"
-                                GroupName="estadoCivil"></RadioButton>
-                            <RadioButton
-                                Content="Viudo"
-                                GroupName="estadoCivil"></RadioButton>
+                    <GroupBox Header="Estado civil">
+                        <StackPanel Style="{StaticResource GroupBoxStack}">
+                            <RadioButton Content="Soltero"
+                                         IsChecked="True"></RadioButton>
+                            <RadioButton Content="Casado"></RadioButton>
+                            <RadioButton Content="Divorciado"></RadioButton>
+                            <RadioButton Content="Viudo"></RadioButton>
                         </StackPanel>
                     </GroupBox>
                 </StackPanel>
